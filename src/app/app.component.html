@@ -1,0 +1,43 @@
+<h3 class="ms-4 mt-3">Add Video Data using ReplaySubject Example</h3>
+
+<div class="mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 form-group">
+        <input #videoInput placeholder="add video name" class="form-control" type="text" />
+      </div>
+      <div class="col-4">
+        <button (click)="onAddVideo(videoInput)" class="btn btn-success">Add Data</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <div class="card mt-4">
+          <div class="card-header">User 1</div>
+          <div class="card-body">
+            <ul class="custom-ul mt-2 list-unstyled">
+              <li *ngFor="let name of userOneList">
+                <strong>video Name :- </strong> {{ name }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+      <div class="card mt-4">
+        <div class="card-header">User 2</div>
+        <div class="card-body">
+
+          <ul class="custom-ul mt-2 list-unstyled">
+            <li *ngFor="let name of userTwoList">
+              <strong>video Name :- </strong> {{ name }}
+            </li>
+          </ul>
+          <button [ngClass]="secondUserSubMode ? 'btn-danger' : 'btn-success'" class="btn" (click)="onSubscribe()">{{secondUserSubMode ? 'Unsubscribe' : 'Subscribe'}}</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

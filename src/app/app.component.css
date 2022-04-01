@@ -1,0 +1,12 @@
+p {
+  font-family: Lato;
+}
+
+.custom-ul > li{
+  
+  padding: 10px;
+  border: 1px solid black;
+  font-size: 14px;
+  line-height: normal;
+  margin-bottom: 5px;
+}
