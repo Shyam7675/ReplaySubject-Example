@@ -6,7 +6,7 @@ import { ReplaySubject } from 'rxjs';
 })
 export class DataShareService {
 
-  videoData = new ReplaySubject<string>(3);
+  videoData = new ReplaySubject<string>(3,5000);
 
   constructor() { }
 
